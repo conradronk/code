@@ -11,7 +11,7 @@
 #define dir_pin 0
 #define drv_enable_pin 2
 
-#define max_step_rate 4000
+#define max_step_rate 2000
 #define default_update_interval 20
 
 //SoftwareSerial Serial1(RX, TX);
@@ -24,7 +24,7 @@ void setup() {
   digitalWrite(drv_enable_pin, HIGH); //Enables DRV8834
 
   Stepper.setMaxSpeed(max_step_rate);
-  Stepper.setAcceleration(50);
+  Stepper.setAcceleration(500);
   Stepper.move(30000);
 }
 
